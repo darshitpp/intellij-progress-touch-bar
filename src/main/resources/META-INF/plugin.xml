@@ -1,0 +1,45 @@
+<idea-plugin>
+    <id>dev.darshit.progress-touch-bar</id>
+    <name>Progress Touch Bar</name>
+    <vendor url="https://darshit.dev">Darshit Patel</vendor>
+    <description><![CDATA[
+    <p><b>Your progress bar theme, now on your macOS Touch Bar.</b></p>
+    <p><img src="https://raw.githubusercontent.com/darshitpp/intellij-progress-touch-bar/main/screenshots/touchbar.gif" alt="Progress Touch Bar filling up while indexing, with percentage and a Hide button" width="100%"/></p>
+    <p>This plugin puts the IDE's background work on your Mac's Touch Bar: indexing, Gradle syncs, builds, anything
+    that shows progress in the status bar. Never look for the tiny bar in the corner of the IDE again!</p>
+
+    <h3>Why you'll love it</h3>
+    <ul>
+      <li><b>See progress at a glance.</b> A full-height, animated bar shows exactly how far along you are, with the
+          task's name and an optional percentage.</li>
+      <li><b>Your theme, on your Touch Bar.</b> Running Nyan Progress Bar or another progress bar theme? It's on
+          your Touch Bar too, fully animated. No theme? You get the IDE's clean standard bar.</li>
+      <li><b>Never in your way.</b> Quick tasks don't flash past: the bar appears only after half a second (you choose
+          the delay), and your normal Touch Bar comes back the moment the task ends.</li>
+      <li><b>One tap to dismiss.</b> Need your usual Touch Bar buttons mid-task? Tap <b>Hide</b> and they're back.</li>
+      <li><b>Light on resources.</b> It pauses when the IDE isn't in front, and you can set the frame rate to trade
+          smoothness for battery.</li>
+      <li><b>Works out of the box.</b> Once the Touch Bar is on (see below), there's nothing to configure. Fine-tune it in <i>Settings | Tools | Progress Touch Bar</i>.</li>
+    </ul>
+
+    <h3>Before you start</h3>
+    <ul>
+      <li>A Mac with a Touch Bar. On other systems the plugin stays quietly inactive.</li>
+      <li>JetBrains IDEs switched the Touch Bar off by default in 2025.1. Turn it on: <i>Help | Find Action | Registry</i>,
+          enable <code>ide.mac.touchbar.enabled</code>, then restart the IDE.</li>
+      <li>In <i>System Settings | Keyboard | Keyboard Shortcuts | Function Keys</i>, make sure the IDE isn't set to always
+          show function keys.</li>
+    </ul>
+    ]]></description>
+    <change-notes><![CDATA[
+    <b>0.1.1</b> The Touch Bar uses your installed progress bar theme (Nyan, Mario, ...), animated. The bar appears after half a second; the delay and frame rate are adjustable in settings.<br/>
+    <b>0.1.0</b> Initial release: progress bar, Hide button, optional percentage.
+    ]]></change-notes>
+    <depends>com.intellij.modules.platform</depends>
+    <resource-bundle>messages.ProgressTouchBarBundle</resource-bundle>
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="dev.darshit.touchbar.ide.BarStartup"/>
+        <applicationConfigurable parentId="tools" instance="dev.darshit.touchbar.ide.TouchBarConfigurable"
+                                 id="dev.darshit.touchbar.settings" bundle="messages.ProgressTouchBarBundle" key="settings.display.name"/>
+    </extensions>
+</idea-plugin>
