@@ -2,6 +2,7 @@
 
 **Your progress bar theme, now on your macOS Touch Bar.**
 
+[![Install](https://img.shields.io/badge/Install-JetBrains%20Marketplace-000?logo=jetbrains)](https://plugins.jetbrains.com/plugin/35859-progress-touch-bar)
 [![JetBrains Marketplace](https://img.shields.io/jetbrains/plugin/v/35859-progress-touch-bar?label=Marketplace)](https://plugins.jetbrains.com/plugin/35859-progress-touch-bar)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/35859-progress-touch-bar)](https://plugins.jetbrains.com/plugin/35859-progress-touch-bar)
 
