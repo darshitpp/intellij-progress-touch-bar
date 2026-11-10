@@ -2,6 +2,9 @@
 
 **Your progress bar theme, now on your macOS Touch Bar.**
 
+[![JetBrains Marketplace](https://img.shields.io/jetbrains/plugin/v/35859-progress-touch-bar?label=Marketplace)](https://plugins.jetbrains.com/plugin/35859-progress-touch-bar)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/35859-progress-touch-bar)](https://plugins.jetbrains.com/plugin/35859-progress-touch-bar)
+
 ![Progress Touch Bar filling up while indexing, with percentage and a Hide button](screenshots/touchbar.gif)
 
 This IntelliJ plugin puts the IDE's background work on your Mac's Touch Bar: indexing, Gradle syncs, builds, anything that shows progress in the status bar. Never look for the tiny bar in the corner of the IDE again!
@@ -13,6 +16,10 @@ This IntelliJ plugin puts the IDE's background work on your Mac's Touch Bar: ind
   [Pokemon Trainer Progress Bar](https://plugins.jetbrains.com/plugin/14609-pokemon-trainer-progress-bar).
 - Appears only for tasks that run longer than half a second; disappears when they end.
 - Tap **Hide** to get your normal Touch Bar back.
+
+## Install
+
+In the IDE: **Settings | Plugins | Marketplace**, search for "Progress Touch Bar". Or get it from the [Marketplace page](https://plugins.jetbrains.com/plugin/35859-progress-touch-bar), or download the zip from [Releases](https://github.com/darshitpp/intellij-progress-touch-bar/releases) and use **Install Plugin from Disk...**.
 
 ## Requirements
 
